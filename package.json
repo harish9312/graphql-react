@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "add": "^2.0.6",
     "apollo-boost": "^0.3.1",
+    "apollo-link-ws": "^1.0.17",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
+    "or": "^0.2.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.4",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-toastify": "^5.1.0",
+    "subscriptions-transport-ws": "^0.9.16",
+    "yarn": "^1.15.2"
   },
   "scripts": {
     "start": "react-scripts start",

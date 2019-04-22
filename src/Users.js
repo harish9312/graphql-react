@@ -1,8 +1,13 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { Query, graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-export class Users extends React.Component {
+export class UsersImpl extends React.Component {
+
+    componentWillReceiveProps(nextProps){
+        console.log('>> nextProps', nextProps);
+    }
+
     render() {
         return <div className="user-container" >
             <Query
@@ -35,3 +40,16 @@ export class Users extends React.Component {
         </div>
     }
 }
+
+const newUser = gql`
+    subscription {
+        userAdded {
+            name,
+            id,
+            email,
+            username
+        }
+    }
+`
+
+export const Users = graphql(newUser)(UsersImpl)
